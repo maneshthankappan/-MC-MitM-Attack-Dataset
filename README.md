@@ -23,7 +23,7 @@ wlan.da== 88:88:88:88:88:88 or wlan.addr== 88:88:88:88:88:88
 ```
 ### B. Filters to identify attack headway traffic flows
 #### 1. Concurrent beacons traffic flows
-##### Filter on real channel
+##### Filter for real channel
 ```
  (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==1)&& (wlan.fc.type_subtype==8)
 ```
