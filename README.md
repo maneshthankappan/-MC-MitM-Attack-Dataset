@@ -71,15 +71,15 @@ wlan.da== 88:88:88:88:88:88 or wlan.addr== 88:88:88:88:88:88
 ```
 (eapol and not wlan.fc.type ==1) && wlan_radio.channel == 13 &&  (wlan.bssid == c0:4a:00:33:3b:62 ) && (wlan.addr== 8c:f5:a3:08:16:63 or wlan.addr== e4:02:9b:cd:3b:92)
 ```
-#### 6. Deauthentication/disassociation traffic flows on rogue channel
+#### 6. Concurrent data traffic flows
 
-##### Filter for deauthentication
+##### Filter for real channel
 ```
-(wlan.bssid == c0:4a:00:33:3b:62 )  and wlan_radio.channel == 13&& (wlan.fc.type_subtype==12) and (wlan.addr == 8c:f5:a3:08:16:63 or wlan.addr== e4:02:9b:cd:3b:92 or wlan.addr ==ff:ff:ff:ff:ff:ff)
+(wlan.addr == c0:4a:00:33:3b:62)  and (wlan.addr == 8c:f5:a3:08:16:63)  && (wlan_radio.channel==1)&&  (wlan.fc.type_subtype==40) 
 ```
-##### Filter for disassociation
+##### Filter for rogue channel
 ```
-(wlan.bssid == c0:4a:00:33:3b:62 )  and wlan_radio.channel == 13&& (wlan.fc.type_subtype==10) and (wlan.addr == 8c:f5:a3:08:16:63 or wlan.addr== e4:02:9b:cd:3b:92 or wlan.addr ==ff:ff:ff:ff:ff:ff)
+(wlan.addr == c0:4a:00:33:3b:62)  and (wlan.addr == 8c:f5:a3:08:16:63)  && (wlan_radio.channel==13)&&  (wlan.fc.type_subtype==40) 
 
 ```
 
