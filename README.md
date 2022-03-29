@@ -10,7 +10,8 @@ Following are the details of the dataset or network trace files
 2. "Network-traffc-flow-rogue-channel" means the captured traffic on rogue channel. This traffic flow can be [viewed online on cloudshark](https://www.cloudshark.org/captures/0487998f9748).
 
 ### A. Filters to identify stage 1 attack traffic 
-
+ * Use the following filters with above cloudshark files 
+ 
 #### 1. Malformed Frame 
 ```
 (_ws.malformed) and (wlan.bssid == c0:4a:00:33:3b:62) and (wlan.fc.type_subtype ==8 or wlan.fc.type_subtype ==5)
@@ -166,8 +167,7 @@ Following are the details of the dataset or network trace files
   * https://www.fragattacks.com/#tools
   * https://papers.mathyvanhoef.com/acsac2014.pdf
   * https://papers.mathyvanhoef.com/ccs2018.pdf
-## Ackowledgements
-We thank mathy vanhoef for his support in rectifying certain issues with MC-MitM attacks. We also thank 
+
 
 
 
