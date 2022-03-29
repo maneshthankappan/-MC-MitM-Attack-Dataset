@@ -153,9 +153,22 @@ Following are the details of the dataset or network trace files
 ```
 
 ## Notes
-
-
+  * Attack signatures are created for educational or research purpose only. 
+  * All attacks were conducted within a private network of UOC research labs.
+  * Network trace does not contain any sensitive data.
+  * Visit the link [How to perfrom MC-MitM Base-Variant Attacks](https://github.com/maneshthankappan/Multi-Channel-Man-in-the-Middle-Attacks-Against-Protected-Wi-Fi-Networks-By-Base-Variant-), which explains how we setup attack environment and recreated the attacks.
+  * Visit the link [How to perfrom MC-MitM Improved-Variant Attacks](https://github.com/maneshthankappan/Multi-Channel-Man-in-the-Middle-Attacks-Against-Protected-Wi-Fi-Networks-By-Improved-Variant), which explains how we setup attack environment and the recreated attacks.
+ 
 ## References
+  * https://github.com/vanhoefm/modwifi
+  * https://github.com/lucascouto/mitm-channel-based-package
+  * https://www.krackattacks.com/
+  * https://www.fragattacks.com/#tools
+  * https://papers.mathyvanhoef.com/acsac2014.pdf
+  * https://papers.mathyvanhoef.com/ccs2018.pdf
+## Ackowledgements
+We thank mathy vanhoef for his support in rectifying certain issues with MC-MitM attacks. We also thank 
 
 
-## Notes
+
+
