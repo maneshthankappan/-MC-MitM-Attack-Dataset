@@ -1,24 +1,23 @@
 
 
 # MC-MitM Attack Signatures
-This activity is a part of our research work entitled "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" and describes how to identify MC-MitM attack signatures in terms of specific network traffic.
+This repository is a part of our research work entitled "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" and describes how to identify MC-MitM attack signatures in terms of specific network traffic.
 
 ## MC-MitM Base Variant Attack Signatures
 During MC-MitM base variant attacks, we use 13 as the rogue channel while the legitimate channel is 1 since the AP is operating on channel 1.
 Following are the details of the dataset or network trace files.
 1. "Network-traffc-flow-real-channel" is the captured traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
 2. "Network-traffc-flow-rogue-channel" is the captured traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/0487998f9748).  
-3. Access the above cloudshark files and apply the following filters to respective frames.
+3. Access the above cloudshark files and apply the following filters to see respective frames.
 
 ### A. Filters to identify stage 1 attack traffic signatures
- * Use the following filters with above cloudshark files 
  
-#### 1. Constant Jamming 
+#### 1. Frame Inter-arrival time due to Constant Jamming 
 ```
 Image
 
 ```
-#### 2. Malformed Frame 
+#### 2. Malformed frames due to Reactive Jamming 
 ```
 (_ws.malformed) and (wlan.bssid == c0:4a:00:33:3b:62) and (wlan.fc.type_subtype ==8 or wlan.fc.type_subtype ==5)
 
