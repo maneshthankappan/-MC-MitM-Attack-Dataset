@@ -100,7 +100,7 @@ Following are the details of the dataset or network trace files
 
 ```
 ### B. Filters to identify stage 2 attack traffic signatures
-Here, victims MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8:50:d4:e4
+Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8:50:d4:e4
 #### 1. Concurrent beacons traffic flows
 ##### Filter for legitimate chanel
 ```
