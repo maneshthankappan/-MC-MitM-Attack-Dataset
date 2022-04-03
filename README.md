@@ -90,6 +90,7 @@ During MC-MitM improved variant attacks, we use 11 as the rogue channel while th
 Following are the details of the dataset or network trace files
 1. "Network-traffc-flow-real-channel" is the captured attack traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
 2. "Network-traffc-flow-rogue-channel" is the captured attack traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/7efff27036ad).
+3. Access the above cloudshark files and apply the following filters to see respective frames.
 
 ### A. Filters to identify stage 1 attack traffic signatures
 
