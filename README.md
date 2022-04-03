@@ -1,7 +1,7 @@
 
 
 # MC-MitM Attack Signatures
-This activity is a part of research work entitled "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" and describes how to identify MC-MitM attack signatures
+This activity is a part of our research work entitled "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" and describes how to identify MC-MitM attack signatures
 
 ## MC-MitM Base Variant Attack Signatures
 During MC-MitM improved variant attacks, we use 13 as the rogue channel while the real channel is 1 since the real AP is operating on channel 1.
@@ -145,11 +145,11 @@ Following are the details of the dataset or network trace files
 
 ##### Filter for real channel
 ```
-(wlan.addr == c0:4a:00:33:3b:62)  and (wlan.addr == 8c:f5:a3:08:16:63)  && (wlan_radio.channel==1)&&  (wlan.fc.type_subtype==40)  
+(wlan.bssid == 78:98:e8:50:d4:e4) && (wlan_radio.channel==11)&& (wlan.addr == 00:72:63:f3:0a:15) and (wlan.fc.type_subtype==32 or wlan.fc.type_subtype==40) 
 ```
 ##### Filter for rogue channel
 ```
-(wlan.addr == c0:4a:00:33:3b:62)  and (wlan.addr == 8c:f5:a3:08:16:63)  && (wlan_radio.channel==13)&&  (wlan.fc.type_subtype==40) 
+(wlan.bssid == 78:98:e8:50:d4:e4) && (wlan_radio.channel==11)&& (wlan.addr == 00:72:63:f3:0a:15) and (wlan.fc.type_subtype==32 or wlan.fc.type_subtype==40) 
 
 ```
 
