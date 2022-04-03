@@ -1,24 +1,31 @@
 
 
 # MC-MitM Attack Signatures
-This activity is a part of our research work entitled "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" and describes how to identify MC-MitM attack signatures
+This activity is a part of our research work entitled "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" and describes how to identify MC-MitM attack signatures in terms of specific network traffic.
 
 ## MC-MitM Base Variant Attack Signatures
-During MC-MitM improved variant attacks, we use 13 as the rogue channel while the real channel is 1 since the real AP is operating on channel 1.
-Following are the details of the dataset or network trace files
-1. "Network-traffc-flow-real-channel" is the captured traffic on legitimate channel. This traffic flow can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
-2. "Network-traffc-flow-rogue-channel" is the captured traffic on rogue channel. This traffic flow can be [viewed online on cloudshark](https://www.cloudshark.org/captures/0487998f9748).
+During MC-MitM base variant attacks, we use 13 as the rogue channel while the legitimate channel is 1 since the AP is operating on channel 1.
+Following are the details of the dataset or network trace files.
+1. "Network-traffc-flow-real-channel" is the captured traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
+2. "Network-traffc-flow-rogue-channel" is the captured traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/0487998f9748).  
+3. Access the above cloudshark files and apply the following filters to respective frames.
 
-### A. Filters to identify stage 1 attack traffic 
+### A. Filters to identify stage 1 attack traffic signatures
  * Use the following filters with above cloudshark files 
  
-#### 1. Malformed Frame 
+#### 1. Constant Jamming 
+```
+Image
+
+```
+#### 2. Malformed Frame 
 ```
 (_ws.malformed) and (wlan.bssid == c0:4a:00:33:3b:62) and (wlan.fc.type_subtype ==8 or wlan.fc.type_subtype ==5)
 
 ```
 ### B. Filters to identify stage 2 attack traffic 
-#### 1. Concurrent beacons traffic flows
+Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś MAC address is c0:4a:00:33:3b:62
+#### 1. Concurrent beacon traffic 
 ##### Filter for legitimate channel
 ```
  (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==1)&& (wlan.fc.type_subtype==8)
@@ -82,17 +89,18 @@ Following are the details of the dataset or network trace files
 ## MC-MitM Improved Variant Attack Signatures
 During MC-MitM improved variant attacks, we use 11 as the rogue channel while the real channel is 1 since the real AP is operating on channel 1.
 Following are the details of the dataset or network trace files
-1. "Network-traffc-flow-real-channel" is the captured traffic on legitimate channel. This traffic flow can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
-2. "Network-traffc-flow-rogue-channel" is the captured traffic on rogue channel. This traffic flow can be [viewed online on cloudshark](https://www.cloudshark.org/captures/7efff27036ad).
+1. "Network-traffc-flow-real-channel" is the captured attack traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
+2. "Network-traffc-flow-rogue-channel" is the captured attack traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/7efff27036ad).
 
-### A. Filters to identify stage 1 attack traffic
+### A. Filters to identify stage 1 attack traffic signatures
 
 #### 1. Fake channel switch anouncements
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==1 )&& wlan.csa.channel_switch_mode
 
 ```
-### B. Filters to identify stage 2 attack traffic
+### B. Filters to identify stage 2 attack traffic signatures
+Here, victims MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8:50:d4:e4
 #### 1. Concurrent beacons traffic flows
 ##### Filter for legitimate chanel
 ```
