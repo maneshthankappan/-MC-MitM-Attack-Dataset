@@ -14,7 +14,9 @@ Following are the details of the dataset or network trace files.
  
 #### 1. Frame Inter-arrival time due to Constant Jamming 
 ```
-Image
+<p align="center">
+  <img src="https://github.com/maneshthankappan/Multi-Channel-Man-in-the-Middle-Attacks-Against-Protected-Wi-Fi-Networks-By-Improved-Variant/blob/main/MC-MitM-Improved%20Variant-Attack%20Setup.jpeg">
+</p>
 
 ```
 #### 2. Malformed frames due to Reactive Jamming 
