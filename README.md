@@ -12,9 +12,8 @@ Following are the details of the dataset or network trace files.
 2. "Network-traffc-flow-rogue-channel" is the captured traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/0487998f9748).  
 3. Access the above cloudshark files and apply the following filters to see respective frames.
 
-### A. <p align="center">
-  <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage1.png">
-</p> 
+### A. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage1.png">
+
  
 #### 1. Frame Inter-arrival time due to Constant Jamming 
 
