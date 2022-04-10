@@ -17,7 +17,8 @@ Following are the details of the dataset or network trace files.
 <p align="center">
   <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/const-jam-example.png">
 </p>
-It is difficult to identify constant jamming behavior with above cloudshark files.Therefore, please see the yellow box in the above wireshark capture figure. Here, the arrival time between first and second beacon frame is around 82 ms, which shows that there was a constant jamming on the channel of the AP.In normal conditions, the frame inter-arrival time would be 0.2 or 0.3ms. If we observe this behavior for a specific time (e.g., 60 seconds),we can easily identify the frame inter-arrival time and delivery ratios to identify potetial costat jamming attacks. 
+It is difficult to identify constant jamming behavior with above cloudshark files.Therefore, please see the yellow box in the above wireshark capture figure. Here, the arrival time between first and second beacon frame is around 82 ms, which shows that there was a constant jamming on the channel of the AP.When such jamming occurs, it drastically affect the overall frame inter-arrival time. In normal conditions, the frame inter-arrival time would be 0.2 or 0.3ms. If we observe this behavior for a specific time (e.g., 60 seconds),we can easily identify the frame inter-arrival time and delivery ratios to identify potential constant jamming attacks. 
+
 #### 2. Malformed frames due to Reactive Jamming 
 ```
 (_ws.malformed) and (wlan.bssid == c0:4a:00:33:3b:62) and (wlan.fc.type_subtype ==8 or wlan.fc.type_subtype ==5)
