@@ -106,9 +106,7 @@ Following are the details of the dataset or network trace files
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==1 )&& wlan.csa.channel_switch_mode
 
 ```
-### B. <p align="center">
-  <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage2.png">
-</p> 
+### B. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage2.png">
 Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8:50:d4:e4
 #### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-beacon-traffic.png">
 ##### Filter for legitimate chanel
