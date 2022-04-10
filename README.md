@@ -96,7 +96,7 @@ Following are the details of the dataset or network trace files
 
 ### A. Filters to identify stage 1 attack traffic signatures
 
-#### 1. Fake channel switch anouncements
+#### 1. Fake channel switch announcements
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==1 )&& wlan.csa.channel_switch_mode
 
