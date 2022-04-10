@@ -30,7 +30,7 @@ It is difficult to identify constant jamming behavior with above cloudshark file
 ### B. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage2.png">
 
 Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś MAC address is c0:4a:00:33:3b:62
-#### 1. Concurrent beacon traffic 
+#### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-beacon-traffic.png">
 ##### Filter for legitimate channel
 ```
  (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==1)&& (wlan.fc.type_subtype==8)
@@ -39,7 +39,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 ```
  (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==13)&& (wlan.fc.type_subtype==8)
 ```
-#### 2. Concurrent probe response traffic 
+#### 2. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-probe-traffic.png">
 ##### Filter for legitimate channel
 ```
 (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==1 )&& (wlan.fc.type_subtype==5) and (wlan.addr == 8c:f5:a3:08:16:63 or wlan.addr == e4:02:9b:cd:3b:92)
@@ -49,7 +49,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==13 )&& (wlan.fc.type_subtype==5) and (wlan.addr == 8c:f5:a3:08:16:63 or wlan.addr == e4:02:9b:cd:3b:92)
 ```
 
-#### 3. Concurrent connection establishment(authentication) traffic 
+#### 3. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-auth-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -59,7 +59,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 ```
  (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==13)&& (wlan.fc.type_subtype==11) and (wlan.addr == 8c:f5:a3:08:16:63 or wlan.addr == e4:02:9b:cd:3b:92)
 ```
-#### 4. Concurrent connection establishment(association) traffic 
+#### 4. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-asso-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -69,7 +69,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 ```
 (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==13)&& (wlan.fc.type_subtype==1) and (wlan.addr == 8c:f5:a3:08:16:63 or wlan.addr == e4:02:9b:cd:3b:92)
 ```
-#### 5. Concurrent connection establishment(EAPOL) traffic 
+#### 5. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-eapol-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -79,7 +79,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 ```
 (eapol and not wlan.fc.type ==1) && wlan_radio.channel == 13 &&  (wlan.bssid == c0:4a:00:33:3b:62 ) && (wlan.addr== 8c:f5:a3:08:16:63 or wlan.addr== e4:02:9b:cd:3b:92)
 ```
-#### 6. Concurrent data traffic 
+#### 6. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-data-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -110,7 +110,7 @@ Following are the details of the dataset or network trace files
   <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage2.png">
 </p> 
 Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8:50:d4:e4
-#### 1. Concurrent beacons traffic flows
+#### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-beacon-traffic.png">
 ##### Filter for legitimate chanel
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==1)&& (wlan.fc.type_subtype==8)
@@ -119,7 +119,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 ```
  (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==11)&& (wlan.fc.type_subtype==8)
 ```
-#### 2. Concurrent probe response traffic 
+#### 2. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-probe-traffic.png">
 ##### Filter for legitimate channel
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==1)&& (wlan.fc.type_subtype==5)
@@ -129,7 +129,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==11)&& (wlan.fc.type_subtype==5)
 ```
 
-#### 3. Concurrent connection establishment(authentication) traffic 
+#### 3. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-auth-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -139,7 +139,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==11)&& (wlan.fc.type_subtype==11) and (wlan.addr==00:72:63:f3:0a:15)
 ```
-#### 4. Concurrent connection establishment(association) traffic 
+#### 4. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-asso-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -149,7 +149,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==11)&& (wlan.fc.type_subtype==1) and (wlan.addr==00:72:63:f3:0a:15)
 ```
-#### 5. Concurrent connection establishment(EAPOL) traffic 
+#### 5. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-eapol-traffic.png">
 ##### Filter for legitimate channel
 ```
 (eapol and not wlan.fc.type ==1) && (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==1)&& (wlan.addr == 00:72:63:f3:0a:15)
@@ -158,7 +158,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 ```
 (eapol and not wlan.fc.type ==1) && (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==11)&& (wlan.addr == 00:72:63:f3:0a:15)
 ```
-#### 6. Concurrent Data traffic 
+#### 6. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-data-traffic.png">
 
 ##### Filter for legitimate channel
 ```
