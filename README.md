@@ -1,9 +1,9 @@
 
 
 # MC-MitM Attack Signatures
-This repository is a part of our research work entitled <p align="center">
+This repository is a part of our research work entitled 
   <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/title.png">
-</p> and describes how to identify MC-MitM attack signatures in terms of specific network traffic.
+and describes how to identify MC-MitM attack signatures in terms of specific network traffic.
 
 ## MC-MitM Base Variant Attack Signatures
 During MC-MitM base variant attacks, we use 13 as the rogue channel while the legitimate channel is 1 since the AP is operating on channel 1.
@@ -27,9 +27,8 @@ It is difficult to identify constant jamming behavior with above cloudshark file
 (_ws.malformed) and (wlan.bssid == c0:4a:00:33:3b:62) and (wlan.fc.type_subtype ==8 or wlan.fc.type_subtype ==5)
 
 ```
-### B. <p align="center">
-  <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage2.png">
-</p> 
+### B. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage2.png">
+
 Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś MAC address is c0:4a:00:33:3b:62
 #### 1. Concurrent beacon traffic 
 ##### Filter for legitimate channel
@@ -99,9 +98,8 @@ Following are the details of the dataset or network trace files
 2. "Network-traffc-flow-rogue-channel" is the captured attack traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/7efff27036ad).
 3. Access the above cloudshark files and apply the following filters to see respective frames.
 
-### A. F<p align="center">
-  <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage1.png">
-</p>
+### A. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage1.png">
+
 
 #### 1. Fake channel switch announcements
 ```
