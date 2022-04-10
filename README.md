@@ -1,7 +1,9 @@
 
 
 # MC-MitM Attack Signatures
-This repository is a part of our research work entitled "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" and describes how to identify MC-MitM attack signatures in terms of specific network traffic.
+This repository is a part of our research work entitled <p align="center">
+  <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/title.png">
+</p> and describes how to identify MC-MitM attack signatures in terms of specific network traffic.
 
 ## MC-MitM Base Variant Attack Signatures
 During MC-MitM base variant attacks, we use 13 as the rogue channel while the legitimate channel is 1 since the AP is operating on channel 1.
