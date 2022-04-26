@@ -3,7 +3,7 @@
 # <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/main-title.png">
 This repository is a part of our research work entitled 
   <p align="center"> <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/title.png"></p>
-and describes how to identify MC-MitM attack signatures in terms of specific network traffic.
+and describes how to identify MC-MitM attack signatures in terms of pattern of network traffic. Kindly refer to our above research paper for more details of MC-MitM attacks and their variants.
 
 ## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/sub-title-1.png">
 During MC-MitM base variant attacks, we use 13 as the rogue channel while the legitimate channel is 1 since the AP is operating on channel 1.
@@ -20,7 +20,7 @@ Following are the details of the dataset or network trace files.
 <p align="center">
   <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/const-jam-example.png">
 </p>
-It is difficult to identify constant jamming behavior with above cloudshark files.Therefore, please see the yellow box in the above wireshark capture figure. Here, the arrival time between first and second beacon frame is around 82 ms, which shows that there was a constant jamming on the channel of the AP. When such jamming occurs, it can drastically affect the standard deviation of frame inter-arrival time If we observe this behavior for a specific time (e.g., 60 seconds). In normal conditions, the frame inter-arrival time would be 0.2 or 0.3ms if the AP transmits a beaco  every 100ms. This way, we calculate the frame inter-arrival time and frame delivery ratio to identify potential constant jamming attacks. 
+It is difficult to identify constant jamming behavior with above cloudshark files.Therefore, please see the yellow box in the above wireshark capture figure. Here, the arrival time between first and second beacon frame is around 82 ms, which shows that there was a constant jamming on the channel of the AP. When such jamming occurs, it can drastically affect the standard deviation of frame inter-arrival time If we observe this behavior for a specific time (e.g., 60 seconds). In normal conditions, the frame inter-arrival time would be 0.2 or 0.3ms if the AP transmits  beacons  every 100ms. This way, we calculate the frame inter-arrival time and frame delivery ratio to identify potential constant jamming attacks. 
 
 #### 2. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/reactive%20jamming.png">
 ```
