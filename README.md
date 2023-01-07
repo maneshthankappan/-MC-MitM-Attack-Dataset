@@ -1,33 +1,33 @@
 
 
-# <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/main-title.png">
+# <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/main-title.png">
 This repository is a part of our research work entitled 
-  <p align="center"> <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/title.png"></p>
+  <p align="center"> <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/title.png"></p>
 and describes how to identify MC-MitM attack signatures in terms of pattern of network traffic. Kindly refer to our above research paper for more details of MC-MitM attacks and their variants.
 
-## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/sub-title-1.png">
+## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/sub-title-1.png">
 During MC-MitM base variant attacks, we use 13 as the rogue channel while the legitimate channel is 1 since the AP is operating on channel 1.
 Following are the details of the dataset or network trace files.
 1. "Network-traffc-flow-real-channel" is the captured traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
 2. "Network-traffc-flow-rogue-channel" is the captured traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/0487998f9748).  
 3. Access the above cloudshark files and apply the following filters to see respective frames.
 
-### A. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage1.png">
+### A. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/filters-stage1.png">
 
  
-#### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/const-jamming.png">
+#### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/const-jamming.png">
 
 <p align="center">
-  <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/const-jam-example.png">
+  <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/const-jam-example.png">
 </p>
 It is difficult to identify constant jamming behavior with above cloudshark files.Therefore, please see the yellow box in the above wireshark capture figure. Here, the arrival time between first and second beacon frame is around 82 ms, which shows that there was a constant jamming on the channel of the AP. When such jamming occurs, it can drastically affect the standard deviation of frame inter-arrival time If we observe this behavior for a specific time (e.g., 60 seconds). In normal conditions, the frame inter-arrival time would be 0.2 or 0.3ms if the AP transmits  beacons  every 100ms. This way, we calculate the frame inter-arrival time and frame delivery ratio to identify potential constant jamming attacks. 
 
-#### 2. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/reactive%20jamming.png">
+#### 2. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/reactive%20jamming.png">
 ```
 (_ws.malformed) and (wlan.bssid == c0:4a:00:33:3b:62) and (wlan.fc.type_subtype ==8 or wlan.fc.type_subtype ==5)
 
 ```
-### B. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage2.png">
+### B. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/filters-stage2.png">
 
 Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś MAC address is c0:4a:00:33:3b:62
 #### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-beacon-traffic.png">
@@ -39,7 +39,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 ```
  (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==13)&& (wlan.fc.type_subtype==8)
 ```
-#### 2. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-probe-traffic.png">
+#### 2. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-probe-traffic.png">
 ##### Filter for legitimate channel
 ```
 (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==1 )&& (wlan.fc.type_subtype==5) and (wlan.addr == 8c:f5:a3:08:16:63 or wlan.addr == e4:02:9b:cd:3b:92)
@@ -49,7 +49,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==13 )&& (wlan.fc.type_subtype==5) and (wlan.addr == 8c:f5:a3:08:16:63 or wlan.addr == e4:02:9b:cd:3b:92)
 ```
 
-#### 3. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-auth-traffic.png">
+#### 3. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-auth-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -59,7 +59,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 ```
  (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==13)&& (wlan.fc.type_subtype==11) and (wlan.addr == 8c:f5:a3:08:16:63 or wlan.addr == e4:02:9b:cd:3b:92)
 ```
-#### 4. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-asso-traffic.png">
+#### 4. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-asso-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -69,7 +69,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 ```
 (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==13)&& (wlan.fc.type_subtype==1) and (wlan.addr == 8c:f5:a3:08:16:63 or wlan.addr == e4:02:9b:cd:3b:92)
 ```
-#### 5. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-eapol-traffic.png">
+#### 5. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-eapol-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -79,7 +79,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 ```
 (eapol and not wlan.fc.type ==1) && wlan_radio.channel == 13 &&  (wlan.bssid == c0:4a:00:33:3b:62 ) && (wlan.addr== 8c:f5:a3:08:16:63 or wlan.addr== e4:02:9b:cd:3b:92)
 ```
-#### 6. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-data-traffic.png">
+#### 6. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-data-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -91,24 +91,24 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 
 ```
 
-## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/sub-title-2.png">
+## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/sub-title-2.png">
 During MC-MitM improved variant attacks, we use 11 as the rogue channel while the real channel is 1 since the real AP is operating on channel 1.
 Following are the details of the dataset or network trace files
 1. "Network-traffc-flow-real-channel" is the captured attack traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
 2. "Network-traffc-flow-rogue-channel" is the captured attack traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/7efff27036ad).
 3. Access the above cloudshark files and apply the following filters to see respective frames.
 
-### A. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage1.png">
+### A. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/filters-stage1.png">
 
 
-#### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/fake%20csa.png">
+#### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/fake%20csa.png">
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==1 )&& wlan.csa.channel_switch_mode
 
 ```
-### B. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/filters-stage2.png">
+### B. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/filters-stage2.png">
 Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8:50:d4:e4
-#### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-beacon-traffic.png">
+#### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-beacon-traffic.png">
 ##### Filter for legitimate chanel
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==1)&& (wlan.fc.type_subtype==8)
@@ -117,7 +117,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 ```
  (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==11)&& (wlan.fc.type_subtype==8)
 ```
-#### 2. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-probe-traffic.png">
+#### 2. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-probe-traffic.png">
 ##### Filter for legitimate channel
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==1)&& (wlan.fc.type_subtype==5)
@@ -127,7 +127,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==11)&& (wlan.fc.type_subtype==5)
 ```
 
-#### 3. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-auth-traffic.png">
+#### 3. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-auth-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -137,7 +137,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==11)&& (wlan.fc.type_subtype==11) and (wlan.addr==00:72:63:f3:0a:15)
 ```
-#### 4. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-asso-traffic.png">
+#### 4. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-asso-traffic.png">
 
 ##### Filter for legitimate channel
 ```
@@ -147,7 +147,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 ```
 (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==11)&& (wlan.fc.type_subtype==1) and (wlan.addr==00:72:63:f3:0a:15)
 ```
-#### 5. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-eapol-traffic.png">
+#### 5. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-eapol-traffic.png">
 ##### Filter for legitimate channel
 ```
 (eapol and not wlan.fc.type ==1) && (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==1)&& (wlan.addr == 00:72:63:f3:0a:15)
@@ -156,7 +156,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 ```
 (eapol and not wlan.fc.type ==1) && (wlan.bssid == 78:98:e8:50:d4:e4 ) && (wlan_radio.channel==11)&& (wlan.addr == 00:72:63:f3:0a:15)
 ```
-#### 6. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-data-traffic.png">
+#### 6. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-data-traffic.png">
 
 ##### Filter for legitimate channel
 ```
