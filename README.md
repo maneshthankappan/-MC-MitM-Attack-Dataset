@@ -29,7 +29,7 @@ It is difficult to identify constant jamming behavior with above cloudshark file
 ### B. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/filters-stage2.png">
 
 Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś MAC address is c0:4a:00:33:3b:62
-#### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/con-beacon-traffic.png">
+#### 1. <img src="github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-beacon-traffic.png">
 ##### Filter for legitimate channel
 ```
  (wlan.bssid == c0:4a:00:33:3b:62 ) and  (wlan_radio.channel==1)&& (wlan.fc.type_subtype==8)
