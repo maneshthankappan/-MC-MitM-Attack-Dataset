@@ -5,7 +5,7 @@ This repository is a part of our research work entitled
   <p align="center"> <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/title.png"></p>
 and describes how to identify MC-MitM attack signatures in terms of pattern of network traffic. Kindly refer to our above research paper for more details of MC-MitM attacks and their variants.
 
-## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/sub-title-1.png">
+## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/sub-title-1.jpg">
 During MC-MitM base variant attacks, we use 13 as the rogue channel while the legitimate channel is 1 since the AP is operating on channel 1.
 Following are the details of the dataset or network trace files.
 1. "Network-traffc-flow-real-channel" is the captured traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
