@@ -6,8 +6,7 @@ This repository is a part of our research work entitled
 and describes how to identify MC-MitM attack signatures in terms of pattern of network traffic. Kindly refer to our above research paper for more details of MC-MitM attacks and their variants.
 
 ## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/sub-title-1.jpg">
-During MC-MitM base variant attacks, we use 13 as the rogue channel while the legitimate channel is 1 since the AP is operating on channel 1.
-Following are the details of the dataset or network trace files.
+In MC-MitM base variant attacks, the legitimate channel is 1 since the AP operates on channel while the rogue channel is 13. The dataset (PCAP files) can be downloaded here. These PCAP files can also be viewed online at Cloudshark. The following is a description of the dataset or PCAP file.
 1. "Network-traffc-flow-real-channel" is the captured traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
 2. "Network-traffc-flow-rogue-channel" is the captured traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/0487998f9748).  
 3. Access the above cloudshark files and apply the following filters to see respective frames.
@@ -92,8 +91,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 ```
 
 ## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/sub-title-2.jpg">
-During MC-MitM improved variant attacks, we use 11 as the rogue channel while the real channel is 1 since the real AP is operating on channel 1.
-Following are the details of the dataset or network trace files
+In MC-MitM improved variant attacks, the legitimate channel is 1 since the AP operates on channel while the rogue channel is 13. The dataset (PCAP files) can be downloaded here. These PCAP files can also be viewed online at Cloudshark. The following is a description of the dataset or PCAP file.
 1. "Network-traffc-flow-real-channel" is the captured attack traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
 2. "Network-traffc-flow-rogue-channel" is the captured attack traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/7efff27036ad).
 3. Access the above cloudshark files and apply the following filters to see respective frames.
