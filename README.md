@@ -1,6 +1,6 @@
 
 
-# <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/main-title.png">
+# <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/main-title.jpg">
 This repository is a part of our research work entitled 
   <p align="center"> <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/title.png"></p>
 and describes how to identify MC-MitM attack signatures in terms of pattern of network traffic. Kindly refer to our above research paper for more details of MC-MitM attacks and their variants.
