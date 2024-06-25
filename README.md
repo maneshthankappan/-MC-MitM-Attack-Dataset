@@ -6,7 +6,7 @@ This repository is a part of our research work entitled
 and describes how to identify MC-MitM attack signatures in terms of pattern of network traffic. Kindly refer to our above research paper for more details of MC-MitM attacks and their variants.
 
 ## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/sub-title-1.jpg">
-In MC-MitM base variant attacks, the legitimate channel is 1 since the AP operates on channel while the rogue channel is 13. The dataset or PCAP files can be [downloaded here](https://drive.google.com/drive/folders/1nsOLzfiosLP9e9lcIs7AVPWij9BBNs1C?usp=share_link). Once downloaded, these PCAP files can be opend using the Wireshark sofware and then applying the filters mentioned in next section to identify different signatures. On the other hand,these PCAP files can also be viewed online at Cloudshark. The following is a description of the dataset or PCAP file.
+In MC-MitM base variant attacks, the legitimate channel is 1, as the AP operates on this channel, while the rogue channel used by the attacker is 13. The dataset or PCAP files can be The dataset or PCAP files can be [downloaded here](https://drive.google.com/drive/folders/1nsOLzfiosLP9e9lcIs7AVPWij9BBNs1C?usp=share_link). Once downloaded, these PCAP files can be opened using Wireshark software or these PCAP files can also be viewed online on Cloudshark, where the filters from the next section A and B can be applied to identify different signatures. Below is a description of the dataset or PCAP file.
 1. "Network-traffc-flow-real-channel" is the captured traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/0db730ad025f).
 2. "Network-traffc-flow-rogue-channel" is the captured traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/f14251b805fd).  
 3. Access the above cloudshark files and apply the following filters to see respective frames.
@@ -28,7 +28,7 @@ It is difficult to identify constant jamming behavior with above cloudshark file
 ```
 ### B. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/filters-stage2.png">
 
-Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś MAC address is c0:4a:00:33:3b:62
+Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and legitimate APś MAC address is c0:4a:00:33:3b:62
 #### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/con-beacon-traffic.png">
 ##### Filter for legitimate channel
 ```
@@ -91,10 +91,10 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and APś
 ```
 
 ## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/sub-title-2.jpg">
-In MC-MitM improved variant attacks, the legitimate channel is 1 since the AP operates on channel while the rogue channel is 13. The dataset (PCAP files) can be [downloaded here](https://drive.google.com/drive/folders/1qY6SyCaCrDWSZII4PmZt8Qn9E3V8VCTn?usp=share_link) These PCAP files can also be viewed online at Cloudshark. 
+In MC-MitM improved variant attacks, the legitimate channel is 1 since the AP operates on channel while the rogue channel is 13. The dataset (PCAP files) can be [downloaded here](https://drive.google.com/drive/folders/1qY6SyCaCrDWSZII4PmZt8Qn9E3V8VCTn?usp=share_link) These PCAP files can also be viewed online at Cloudshark  then apply the filters mentioned in next section A and B to identify different signatures
 The following is a description of the dataset or PCAP file.
-1. "Network-traffc-flow-real-channel" is the captured attack traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/2799fd9a88d6).
-2. "Network-traffc-flow-rogue-channel" is the captured attack traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/7efff27036ad).
+1. "Network-traffc-flow-real-channel" is the captured attack traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/a13c1cb87ca6).
+2. "Network-traffc-flow-rogue-channel" is the captured attack traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/eef173a4c5ee).
 3. Access the above cloudshark files and apply the following filters to see respective frames.
 
 ### A. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/filters-stage1.png">
