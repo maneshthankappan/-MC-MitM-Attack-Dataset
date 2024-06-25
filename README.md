@@ -16,6 +16,7 @@ In MC-MitM base variant attacks, the legitimate channel is 1, as the AP operates
  
 #### 1. <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/const-jamming.png">
 It is difficult to identify constant jamming behavior with above cloudshark files.Therefore, below we provide a wireshark capture screenshot of such constant jamming behavior. Please see the yellow box in the above wireshark capture screenshot. Here, the arrival time between first and second beacon frame is around 82 ms, which shows that there was a constant jamming on the channel of the AP. When such jamming occurs, it can drastically affect the standard deviation of frame inter-arrival time If we observe this behavior for a specific time (e.g., 60 seconds). In normal conditions, the frame inter-arrival time would be 0.2 or 0.3ms if the AP transmits  beacons  every 100ms. This way, we calculate the frame inter-arrival time and frame delivery ratio to identify potential constant jamming attacks. 
+Note: During constant jamming, we target the AP with the MAC address "c0:4a:00:33:3b:62," which operates on channel 1. Refer to the filter used in Wireshark shown in the image below.
 <p align="center">
   <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/const-jam-example.png">
 </p>
@@ -91,7 +92,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and legi
 ```
 
 ## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/sub-title-2.jpg">
-In MC-MitM base variant attacks, the legitimate channel is 1, as the AP operates on this channel, while the rogue channel used by the attacker is 11. The dataset (PCAP files) can be [downloaded here](https://drive.google.com/drive/folders/1qY6SyCaCrDWSZII4PmZt8Qn9E3V8VCTn?usp=share_link) or these PCAP files can also be viewed online at Cloudshark. Apply the filters mentioned in next section A and B to identify different signatures
+In MC-MitM base variant attacks, the legitimate channel is 1, as the AP operates on this channel, while the rogue channel used by the attacker is 11. The dataset (PCAP files) can be [downloaded here](https://drive.google.com/drive/folders/1qY6SyCaCrDWSZII4PmZt8Qn9E3V8VCTn?usp=share_link) or these PCAP files can also be viewed online at Cloudshark. Apply the filters mentioned in next section A and B to identify different signatures.
 The following is a description of the dataset or PCAP file.
 1. "Network-traffc-flow-real-channel" is the captured attack traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/a13c1cb87ca6).
 2. "Network-traffc-flow-rogue-channel" is the captured attack traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/eef173a4c5ee).
