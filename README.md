@@ -91,7 +91,7 @@ Here, victims MAC addresses are 8c:f5:a3:08:16:63 and e4:02:9b:cd:3b:92 and legi
 ```
 
 ## <img src="https://github.com/maneshthankappan/MC-MitM-Attack-Dataset/blob/main/Labels/sub-title-2.jpg">
-In MC-MitM improved variant attacks, the legitimate channel is 1 since the AP operates on channel while the rogue channel is 13. The dataset (PCAP files) can be [downloaded here](https://drive.google.com/drive/folders/1qY6SyCaCrDWSZII4PmZt8Qn9E3V8VCTn?usp=share_link) These PCAP files can also be viewed online at Cloudshark  then apply the filters mentioned in next section A and B to identify different signatures
+In MC-MitM base variant attacks, the legitimate channel is 1, as the AP operates on this channel, while the rogue channel used by the attacker is 11. The dataset (PCAP files) can be [downloaded here](https://drive.google.com/drive/folders/1qY6SyCaCrDWSZII4PmZt8Qn9E3V8VCTn?usp=share_link) or these PCAP files can also be viewed online at Cloudshark. Apply the filters mentioned in next section A and B to identify different signatures
 The following is a description of the dataset or PCAP file.
 1. "Network-traffc-flow-real-channel" is the captured attack traffic on legitimate channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/a13c1cb87ca6).
 2. "Network-traffc-flow-rogue-channel" is the captured attack traffic on rogue channel, which can be [viewed online on cloudshark](https://www.cloudshark.org/captures/eef173a4c5ee).
