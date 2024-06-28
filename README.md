@@ -160,7 +160,7 @@ Here, victim MAC addresses is 00:72:63:f3:0a:15 and APś MAC address is 78:98:e8
 
 ##### Filter for legitimate channel
 ```
-(wlan.bssid == 78:98:e8:50:d4:e4) && (wlan_radio.channel==11)&& (wlan.addr == 00:72:63:f3:0a:15) and (wlan.fc.type_subtype==32 or wlan.fc.type_subtype==40) 
+(wlan.bssid == 78:98:e8:50:d4:e4) && (wlan_radio.channel==1)&& (wlan.addr == 00:72:63:f3:0a:15) and (wlan.fc.type_subtype==32 or wlan.fc.type_subtype==40) 
 ```
 ##### Filter for rogue channel
 ```
